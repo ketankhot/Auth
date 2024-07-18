@@ -1,7 +1,7 @@
 import User from "../models/user.model.js";
 import bcryptjs from "bcryptjs";
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
   // Incoming data from the user and destructre it
   const { email, username, password } = req.body;
   // const salt = 10;
@@ -20,6 +20,6 @@ export const signup = async (req, res) => {
       message: "User Created Successfully",
     });
   } catch (error) {
-    res.send(error.message + " username is already present in database");
+    next(error);
   }
 };
