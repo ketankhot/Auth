@@ -8,7 +8,7 @@ const Header = () => {
           <h1 className="font-bold text-2xl">Auth App</h1>
         </Link>
 
-        <ul className="flex gap-5 font-medium text-xl">
+        <ul className="flex gap-5 font-medium">
           <Link to="/" className="hover:text-orange-400 duration-150">
             <li>Home</li>
           </Link>
