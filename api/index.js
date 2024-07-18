@@ -21,7 +21,7 @@ app.use(express.json());
 app.use("/api/data", userRoute);
 app.use("/api/auth", authRoute);
 
-// Handling the MiddleWare
+// adding the MiddleWare and function to handle error
 app.use((error, req, res, next) => {
   const statusCode = error.statusCode || 500;
   const message = error.message || "Internal Server Error";
