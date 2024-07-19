@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
 // Creating the Mongoose Database Schema for the user
 // Schema is used for the structure of the information store in DB
 const userSchema = new mongoose.Schema(
   {
     username: {
-      type: String,
+      type: Schema.Types.Mixed,
       required: true,
       unique: true,
     },
